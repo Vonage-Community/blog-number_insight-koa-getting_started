@@ -1,0 +1,33 @@
+{
+  "name": "blog-number_insight-koa-getting_started",
+  "version": "2.0.0",
+  "description": "Getting started with Vonage's Number Insight API on Koa.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "vonage",
+    "number-insight",
+    "koa",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vonage/auth": "^1.0.0",
+    "@vonage/server-sdk": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "koa": "^2.14.0",
+    "koa-bodyparser": "^4.4.0",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
