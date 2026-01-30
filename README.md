@@ -20,7 +20,7 @@ This project introduces the [Vonage Number Insight API](https://developer.vonage
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Vonage-Community/blog-number_insight-koa-getting_started.git
+   git clone https://github.com/Vonage-Community/blog-number_insight-koa-getting_started
    cd blog-number_insight-koa-getting_started
    ```
 

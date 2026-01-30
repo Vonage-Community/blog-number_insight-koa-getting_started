@@ -28,7 +28,7 @@ router.post('/submit', async (ctx, next) => {
 
 async function getInsight(number) {
   try {
-    // Update with basicLook, standardLookup, or advancedLookup as needed
+    // Update with basicLookup, standardLookup, or advancedLookup as needed
     const result = await vonage.numberInsights.basicLookup(number)
     return result
   } catch (error) {
