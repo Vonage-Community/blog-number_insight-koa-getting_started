@@ -1,6 +1,6 @@
-# Getting Started with Vonage's Number Insight APIs on Koa.js
+# Getting Started with Vonage's Number Insight with Node.js
 
-This project introduces the [Vonage Number Insight API](https://developer.vonage.com/en/number-insight/overview) and demonstrates how to retrieve information about a phone number via a web interface using [Koa.js](https://koajs.com/).
+This project introduces the [Vonage Number Insight API](https://developer.vonage.com/en/number-insight/overview) and demonstrates how to retrieve information about a phone number via a web interface using [Node.js](https://nodejs.org/).
 
 ## Features
 
@@ -9,7 +9,7 @@ This project introduces the [Vonage Number Insight API](https://developer.vonage
   - **Standard**: Adds carrier, porting, and line type information
   - **Advanced**: Adds validity, reachability, and roaming status
 - Clean, modern web interface
-- Built with Koa.js and the Vonage Node.js SDK
+- Built with Node.js, Express.js and the Vonage Node.js SDK
 
 ## Prerequisites
 
@@ -19,28 +19,33 @@ This project introduces the [Vonage Number Insight API](https://developer.vonage
 ## Setup
 
 1. Clone this repository:
+
    ```bash
-   git clone https://github.com/Vonage-Community/blog-number_insight-koa-getting_started
-   cd blog-number_insight-koa-getting_started
+   git clone https://github.com/Vonage-Community/blog-number_insight-node-getting_started
+   cd blog-number_insight-node-getting_started
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Copy the example environment file and add your Vonage credentials:
+
    ```bash
    cp .env.example .env
    ```
-   
+
    Edit `.env` and add your API key and secret from the [Vonage Dashboard](https://dashboard.nexmo.com):
+
    ```
    VONAGE_API_KEY='your_api_key_here'
    VONAGE_API_SECRET='your_api_secret_here'
    ```
 
 4. Start the server:
+
    ```bash
    npm start
    ```
@@ -50,8 +55,7 @@ This project introduces the [Vonage Number Insight API](https://developer.vonage
 ## Usage
 
 1. Enter a phone number in the input field (without leading `+` or `00`)
-2. Select the insight level (Basic, Standard, or Advanced)
-3. Click "Get Insights" to retrieve information about the number
+2. Click "Submit" to retrieve information about the number
 
 **Tip:** Use the format `14155550100` for US numbers (country code + number).
 
@@ -77,7 +81,7 @@ For advanced fraud detection capabilities including SIM Swap detection and fraud
 ## Support
 
 - [Vonage Community Slack](https://developer.vonage.com/community/slack)
-- [@VonageDev on Twitter](https://x.com/vonagedev)
+- [@VonageDev on X](https://x.com/vonagedev)
 
 ## License
 

@@ -1,29 +1,26 @@
 require('dotenv').config()
 
-const Koa = require('koa')
-const serve = require('koa-static')
-const bodyParser = require('koa-bodyparser')
-const Router = require('koa-router')
+const express = require('express')
 const { Vonage } = require('@vonage/server-sdk')
 
 const port = process.env.PORT || 3000
-const app = new Koa()
-const router = new Router()
+
+const app = new express()
 
 const vonage = new Vonage({
   apiKey: process.env.VONAGE_API_KEY,
   apiSecret: process.env.VONAGE_API_SECRET
 })
 
-app.use(bodyParser())
-app.use(serve('./public'))
+app.use(express.json())
+app.use(express.static('./public'))
 
-router.post('/submit', async (ctx, next) => {
-  const payload = ctx.request.body
+app.post('/submit', async (req, res) => {
+  const payload = req.body
   const number = payload.phone
   const insight = await getInsight(number)
-  ctx.status = 200
-  ctx.body = insight
+
+  res.status(200).json(insight)
 })
 
 async function getInsight(number) {
@@ -37,8 +34,6 @@ async function getInsight(number) {
   }
 }
 
-app.use(router.routes()).use(router.allowedMethods())
-
-const listener = app.listen(port, function () {
+const listener = app.listen(port, function() {
   console.log('Your app is listening on port ' + listener.address().port)
 })
